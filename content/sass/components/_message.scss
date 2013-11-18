@@ -1,0 +1,59 @@
+/*------------------------------------*\
+    MESSAGE
+\*------------------------------------*/
+/**
+ * Meldingen in de website
+ *
+    <div class="message"><span>Standaard melding</span></div>
+    <div class="message message--succes"><i class="icon icon--check-white"></i><span>Succes bericht</span></div>
+    <div class="message message--notice"><i class="icon icon--notice"></i><span>Notice bericht</span></div>
+    <div class="message message--error"><i class="icon icon--error-white"></i><span>Fout bericht</span></div>
+ *
+ */
+.message {
+    position: relative;
+    margin: 1em 0;
+    padding: 5px 10px;
+    border: {
+        width: 1px;
+        style: solid;
+        radius: $borderradius;
+        color: darken($message-color, 10%);
+    }
+    @include font-size( 14px, 20px );
+    font-weight: bold;
+    color: #FFF;
+    background-color: $message-color;
+
+    span {
+        @include inline(middle);
+    }
+
+    .icon {
+        position: absolute;
+        left: 10px;
+        top: 5px;
+
+        + span {
+            padding-left: 30px;
+        }
+    }
+}
+
+.message--error {
+    border-color: darken($error-color, 10%);
+    color: #FFF;
+    background-color: $error-color;
+}
+
+.message--succes {
+    border-color: darken($succes-color, 10%);
+    color: #FFF;
+    background-color: $succes-color;
+}
+
+.message--notice {
+    border-color: darken($notice-color, 10%);
+    color: #3d6611;
+    background-color: $notice-color;
+}
