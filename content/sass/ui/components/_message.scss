@@ -10,6 +10,11 @@
     <div class="message message--error"><i class="icon icon--error-white"></i><span>Fout bericht</span></div>
  *
  */
+$message-color: #2ba6cb; // blauw
+$succes-color: #5da423; // groen
+$error-color: #c60f13; // rood
+$notice-color: #e7d432; // notice
+
 .message {
     position: relative;
     margin: 1em 0;
@@ -17,10 +22,9 @@
     border: {
         width: 1px;
         style: solid;
-        radius: $borderradius;
+        radius: $brand-round;
         color: darken($message-color, 10%);
     }
-    @include font-size( 14px, 20px );
     font-weight: bold;
     color: #FFF;
     background-color: $message-color;
