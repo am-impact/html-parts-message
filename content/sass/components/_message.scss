@@ -4,16 +4,18 @@
 /**
  * Meldingen in de website
  *
+ * _settings.scss
+ * $message-color: #2ba6cb; // blauw
+ * $succes-color: #5da423; // groen
+ * $error-color: #c60f13; // rood
+ * $notice-color: #e7d432; // notice
+ *
     <div class="message"><span>Standaard melding</span></div>
     <div class="message message--succes"><i class="icon icon--check-white"></i><span>Succes bericht</span></div>
     <div class="message message--notice"><i class="icon icon--notice"></i><span>Notice bericht</span></div>
     <div class="message message--error"><i class="icon icon--error-white"></i><span>Fout bericht</span></div>
  *
  */
-$message-color: #2ba6cb; // blauw
-$succes-color: #5da423; // groen
-$error-color: #c60f13; // rood
-$notice-color: #e7d432; // notice
 
 .message {
     position: relative;
@@ -22,7 +24,7 @@ $notice-color: #e7d432; // notice
     border: {
         width: 1px;
         style: solid;
-        radius: $brand-round;
+        radius: $global-radius;
         color: darken($message-color, 10%);
     }
     font-weight: bold;
