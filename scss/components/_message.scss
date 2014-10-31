@@ -1,0 +1,40 @@
+$message__color--default: #2ba6cb;
+$message__color--succes: #5da423;
+$message__color--error: #c60f13;
+$message__color--notice: #e7d432;
+
+.message {
+    position: relative;
+    margin: 1em 0;
+    padding: 5px 10px;
+    border: {
+        width: 1px;
+        style: solid;
+        radius: size(radius);
+        color: darken($message__color--default, 10%);
+    }
+    font-weight: bold;
+    color: #FFF;
+    background-color: $message__color--default;
+
+    // Error
+    &--error {
+        border-color: darken($message__color--succes, 10%);
+        color: #FFF;
+        background-color: $message__color--succes;
+    }
+
+    // Succes
+    &--succes {
+        border-color: darken($message__color--error, 10%);
+        color: #FFF;
+        background-color: $message__color--error;
+    }
+
+    // Notice
+    &--notice {
+        border-color: darken($message__color--notice, 10%);
+        color: #3d6611;
+        background-color: $message__color--notice;
+    }
+}
