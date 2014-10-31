@@ -1,5 +1,5 @@
 $message__color--default: #2ba6cb;
-$message__color--succes: #5da423;
+$message__color--success: #5da423;
 $message__color--error: #c60f13;
 $message__color--notice: #e7d432;
 
@@ -19,16 +19,16 @@ $message__color--notice: #e7d432;
 
     // Error
     &--error {
-        border-color: darken($message__color--succes, 10%);
-        color: #FFF;
-        background-color: $message__color--succes;
-    }
-
-    // Succes
-    &--succes {
         border-color: darken($message__color--error, 10%);
         color: #FFF;
         background-color: $message__color--error;
+    }
+
+    // Succes
+    &--success {
+        border-color: darken($message__color--success, 10%);
+        color: #FFF;
+        background-color: $message__color--success;
     }
 
     // Notice
